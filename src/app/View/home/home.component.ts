@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,6 @@ import { faFilm } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-	filmIcon = faFilm;
   constructor() { }
 
   ngOnInit(): void {
