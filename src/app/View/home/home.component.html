@@ -1,29 +1,30 @@
 <div class="cards">
 	<div class="row">
 		<div class="item">
-			<fa-icon [icon]="faCoffee"></fa-icon>
+			<fa-icon class="homeItemIcon" [icon]="faUs"></fa-icon>
 			<p class="homeItemtxt">Available groups</p>
 		</div>
 		<div class="item">
-			<mat-icon class="homeItemIcon">person</mat-icon>
+			<fa-icon class="homeItemIcon" [icon]="faUG"></fa-icon>
 			<p class="homeItemtxt">Best student for the month</p>
 		</div>
 		<div class="item">
-			<mat-icon class="homeItemIcon">library_books</mat-icon>
+			<fa-icon class="homeItemIcon" [icon]="faB"></fa-icon>
 			<p class="homeItemtxt">Tests today</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="item">
-			<p class="homeItemtxt">Available groups</p>
+			<fa-icon class="homeItemIcon" [icon]="faUG"></fa-icon>
+			<p class="homeItemtxt">Number of students {{ StudentsNumber }}</p>
 		</div>
 		<div class="item">
-			<mat-icon class="homeItemIcon">person</mat-icon>
-			<p class="homeItemtxt">Best student for the month</p>
+			<fa-icon class="homeItemIcon" [icon]="faT"></fa-icon>
+			<p class="homeItemtxt">Number of teachers {{ TeachersNumber }}</p>
 		</div>
 		<div class="item">
-			<mat-icon class="homeItemIcon">library_books</mat-icon>
-			<p class="homeItemtxt">Tests today</p>
+			<fa-icon class="homeItemIcon" [icon]="faUs"></fa-icon>
+			<p class="homeItemtxt">Number of groups {{ GroupsNumber }}</p>
 		</div>
 	</div>
 </div>

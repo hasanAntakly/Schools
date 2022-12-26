@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +11,15 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-	faCoffee = faCoffee;
+	faUs = faUsers;
+	faUG = faUserGraduate;
+	faB = faBookOpen;
+	faT = faChalkboardTeacher;
+
+	StudentsNumber = "75";
+	GroupsNumber = "3";
+	TeachersNumber = "10";
+
   constructor() { }
 
   ngOnInit(): void {
