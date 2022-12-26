@@ -2,21 +2,30 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	--dbg: #1E1E1E;
+  --lbg: #2D2D30;
+	--fg: #fff;
+	--mc: #007ACC;
 }
 
-.example-container {
-  width: 500px;
-  height: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.example-sidenav-content {
-  display: flex;
+.container {
+  width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
 }
 
-.example-sidenav {
+.sidenav {
+	background-color: var(--lbg);
+	color: var(--fg);
+	width: 18%;
   padding: 20px;
+}
+
+.sidenavContent {
+	background-color: var(--dbg);
+	color: var(--fg);
+  height: 100%;
+}
+
+.Iconbtn{
+	color: var(--mc);
 }

@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'schools';
 	showFiller = false;
+	menuIcon = 'menu';
+
+	public Change_Icon(){
+		if(this.menuIcon == 'menu')
+			this.menuIcon = 'arrow_back';
+		else this.menuIcon = 'menu'; 
+	}
 }

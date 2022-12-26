@@ -3,7 +3,28 @@
 	justify-content: space-between;
 	align-items: center;
 }
-/* 
-.item{
 
-} */
+.item{
+	background-color: var(--mc);
+	margin: 20px;
+	width: 30%;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-radius: 20px;
+	box-shadow: -13px 13px 46px 4px rgba(0,0,0,0.67);
+}
+
+.homeItemIcon{
+	color: var(--fg);
+	width: 120px;
+	height: 150px;
+	font-size: 150px;
+}
+
+.homeItemtxt{
+	color: var(--fg);
+	font-size: 40px;
+	inline-size: 300px;
+}
