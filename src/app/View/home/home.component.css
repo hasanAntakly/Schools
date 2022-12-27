@@ -28,3 +28,14 @@
 	font-size: 40px;
 	inline-size: 300px;
 }
+
+.homebtnContainer{
+	height: 100px;
+}
+
+.homebtns{
+	margin: 20px;
+	width: 250px;
+	height: 60px;
+}
+

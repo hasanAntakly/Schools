@@ -28,3 +28,10 @@
 		</div>
 	</div>
 </div>
+<div class="homebtnContainer">
+	<button class="homebtns" [@PClickedT]="PClicked ? 'PClicked' : 'PNotClicked'" (click)="toggleP(); toggleS();" mat-stroked-button>Primary</button>
+	<button class="homebtns" [@SClickedT]="SClicked ? 'SClicked' : 'SNotClicked'" (click)="toggleS(); toggleP();" mat-stroked-button>Secondary</button>
+</div>
+<div>
+	
+</div>
