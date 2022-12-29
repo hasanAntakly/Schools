@@ -31,6 +31,9 @@
 
 .homebtnContainer{
 	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .homebtns{
@@ -39,3 +42,52 @@
 	height: 60px;
 }
 
+.homeDataGridContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.homeDataGrid{
+	border: solid 3px var(--mc);
+	height: auto;
+	margin: 20px;
+}
+
+.dataGridtxtContainer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 30px;
+}
+
+.dataGridtxt{
+	text-align: center;
+	width: 300px;
+	color: var(--mc);
+	font-size: 22px;
+}
+
+.dataGridItem{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--lbg);
+	margin: 10px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.dataGridItem:hover{
+	background-color: var(--dbg);
+}
+
+.NotReadyHomeItemIcon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 300px;
+	font-size: 120px;
+	color: var(--fg);
+}

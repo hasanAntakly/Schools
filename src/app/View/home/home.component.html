@@ -32,6 +32,30 @@
 	<button class="homebtns" [@PClickedT]="PClicked ? 'PClicked' : 'PNotClicked'" (click)="toggleP(); toggleS();" mat-stroked-button>Primary</button>
 	<button class="homebtns" [@SClickedT]="SClicked ? 'SClicked' : 'SNotClicked'" (click)="toggleS(); toggleP();" mat-stroked-button>Secondary</button>
 </div>
-<div>
-	
+
+<div class="homeDataGridContainer" [@SGridClickedT]="SClicked ? 'SGridClicked' : 'SGridNotClicked'">
+	<div class="homeDataGrid">
+		<fa-icon class="NotReadyHomeItemIcon" [icon]="faTO"></fa-icon>
+		<p class="NotReadyHomeItemIcon" style="font-size: 30px; height: auto; margin-top: -50px; color: white;">This feature is under construction</p>
+	</div>
 </div>
+
+<div class="homeDataGridContainer" [@PGridClickedT]="PClicked ? 'PGridClicked' : 'PGridNotClicked'">
+	<div class="dataGridtxtContainer">
+		<p class="dataGridtxt">Student Name</p>
+		<p class="dataGridtxt">Date</p>
+		<p class="dataGridtxt">Full Amount Of Money</p>
+		<p class="dataGridtxt">Monthly Payment</p>
+		<p class="dataGridtxt">Amount</p>
+	</div>
+	<div class="homeDataGrid">
+		<div class="dataGridItem" *ngFor="let item of sthtp;">
+			<p class="dataGridtxt">{{item.SN}}</p>
+			<p class="dataGridtxt">{{item.D}}</p>
+			<p class="dataGridtxt">{{item.FAOM}}</p>
+			<p class="dataGridtxt">{{item.MP}}</p>
+			<p class="dataGridtxt">{{item.A}}</p>
+		</div>
+	</div>
+</div>
+

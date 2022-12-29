@@ -4,6 +4,7 @@ import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { faTools } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -14,14 +15,15 @@ import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 			// ...
 			state('PClicked', style({
 				fontSize: '28px',
-				left: '42%',
 				width: '250px',
 				height: '60px',
-				borderBottom: 'solid 3px var(--mc)'
+				borderBottom: 'solid 3px var(--mc)',
+				pointerEvents: 'none'
 			})),
 			state('PNotClicked', style({
+				position: 'absolute',
 				fontSize: '15px',
-				left: '60%',
+				left: '0',
 				width: '150px',
 				height: '40px',
 				border: 'solid 1px var(--fg)'
@@ -37,22 +39,53 @@ import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 			// ...
 			state('SClicked', style({
 				fontSize: '28px',
-				left: '32%',
 				width: '250px',
 				height: '60px',
-				borderBottom: 'solid 3px var(--mc)'
+				borderBottom: 'solid 3px var(--mc)',
+				pointerEvents: 'none'
 			})),
 			state('SNotClicked', style({
+				position: 'absolute',
 				fontSize: '15px',
-				left: '45%',
+				left: '0',
 				width: '150px',
 				height: '40px',
-				border: 'solid 1px var(--fg)'
+				border: 'solid 1px var(--fg)',
 			})),
 			transition('SClicked => SNotClicked', [
 				animate('0.3s')
 			]),
 			transition('SNotClicked => SClicked', [
+				animate('0.3s')
+			]),
+		]),
+		trigger('PGridClickedT', [
+			// ...
+			state('PGridClicked', style({
+			})),
+			state('PGridNotClicked', style({
+				height: '0px',
+				opacity: '0'
+			})),
+			transition('PGridClicked => PGridNotClicked', [
+				animate('0.3s')
+			]),
+			transition('PGridNotClicked => PGridClicked', [
+				animate('0.3s')
+			]),
+		]),
+		trigger('SGridClickedT', [
+			// ...
+			state('SGridClicked', style({
+			})),
+			state('SGridNotClicked', style({
+				height: '0px',
+				opacity: '0'
+			})),
+			transition('SGridClicked => SGridNotClicked', [
+				animate('0.3s')
+			]),
+			transition('SGridNotClicked => SGridClicked', [
 				animate('0.3s')
 			]),
 		]),
@@ -65,6 +98,7 @@ export class HomeComponent implements OnInit {
 	faUG = faUserGraduate;
 	faB = faBookOpen;
 	faT = faChalkboardTeacher;
+	faTO = faTools;
 
 	StudentsNumber = "75";
 	GroupsNumber = "3";
@@ -72,7 +106,7 @@ export class HomeComponent implements OnInit {
 
   PClicked = true;
 	SClicked = false;
-			
+
 	toggleP() {
 		this.PClicked = !this.PClicked;
 	}
@@ -85,5 +119,22 @@ export class HomeComponent implements OnInit {
 	
   ngOnInit(): void {
   }
-
+		
+	sthtp: STHTP[] =[  
+		{SN : 'Hasan', D : '2022', FAOM : '1500000', MP : '150000', A : '50000'},  
+		{SN : 'Ahmad', D : '2023', FAOM : '1800000', MP : '250000', A : '70000'},  
+		{SN : 'Jasem', D : '2024', FAOM : '2500000', MP : '350000', A : '90000'},  
+		{SN : 'Hasan', D : '2022', FAOM : '1500000', MP : '150000', A : '50000'},  
+		{SN : 'Ahmad', D : '2023', FAOM : '1800000', MP : '250000', A : '70000'},  
+		{SN : 'Jasem', D : '2024', FAOM : '2500000', MP : '350000', A : '90000'},  
+	]  
 }
+
+class STHTP {  
+	SN = '';  
+	D = '';  
+	FAOM = '';  
+	MP = '';  
+	A = '';  
+}  
+	
