@@ -1,8 +1,10 @@
+<!-- The cards -->
 <div class="cards">
 	<div class="row">
 		<div class="item">
 			<fa-icon class="homeItemIcon" [icon]="faUs"></fa-icon>
 			<p class="homeItemtxt">Available groups</p>
+			<button mat-button (click)="openDialog()">Open dialog</button>
 		</div>
 		<div class="item">
 			<fa-icon class="homeItemIcon" [icon]="faUG"></fa-icon>
@@ -28,11 +30,14 @@
 		</div>
 	</div>
 </div>
+
+<!-- The buttons -->
 <div class="homebtnContainer">
 	<button class="homebtns" [@PClickedT]="PClicked ? 'PClicked' : 'PNotClicked'" (click)="toggleP(); toggleS();" mat-stroked-button>Primary</button>
 	<button class="homebtns" [@SClickedT]="SClicked ? 'SClicked' : 'SNotClicked'" (click)="toggleS(); toggleP();" mat-stroked-button>Secondary</button>
 </div>
 
+<!-- The first grid -->
 <div class="homeDataGridContainer" [@SGridClickedT]="SClicked ? 'SGridClicked' : 'SGridNotClicked'">
 	<div class="homeDataGrid">
 		<fa-icon class="NotReadyHomeItemIcon" [icon]="faTO"></fa-icon>
@@ -40,6 +45,7 @@
 	</div>
 </div>
 
+<!-- The second grid -->
 <div class="homeDataGridContainer" [@PGridClickedT]="PClicked ? 'PGridClicked' : 'PGridNotClicked'">
 	<div class="dataGridtxtContainer">
 		<p class="dataGridtxt">Student Name</p>

@@ -1,0 +1,25 @@
+<div class="dialog">
+	<fa-icon class="closebtn" [icon]="faT" mat-dialog-close></fa-icon>
+	<div class="dialogContent">
+		<div class="dialogContentColumn">
+			<p class="dialogContentHeader">Study Year</p>
+			<div class="dialogContentComboBox">
+				<div class="dialogContenttxtContainer" *ngFor="let item of SYItems;" (click)="yearClicked(item.Year)">
+					<p class="dialogContenttxt">{{item.Year}}</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="dialogContentColumn">
+			<p class="dialogContentHeader">Educational Level</p>
+			<div class="dialogContentComboBox">
+				<div class="dialogContenttxtContainer" *ngFor="let item of ELItems;" (click)="eduClicked(item.EL)">
+					<p class="dialogContenttxt">{{item.EL}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="DonebtnContainer">
+		<button mat-stroked-button class="Donebtn">Done</button>
+	</div>
+</div>

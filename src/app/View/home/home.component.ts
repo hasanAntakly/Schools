@@ -5,6 +5,8 @@ import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { faTools } from '@fortawesome/free-solid-svg-icons';
+import { DialogOpenGroupsComponent } from '../dialogs/dialog-open-groups/dialog-open-groups.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -92,7 +94,7 @@ import { faTools } from '@fortawesome/free-solid-svg-icons';
 	],
 	})
 
-export class HomeComponent implements OnInit {
+export class HomeComponent{
 
 	faUs = faUsers;
 	faUG = faUserGraduate;
@@ -115,11 +117,15 @@ export class HomeComponent implements OnInit {
 		this.SClicked = !this.SClicked;
 	}
 
-  constructor() { }
-	
-  ngOnInit(): void {
+  constructor(public OPDialog: MatDialog) {}
+
+  openDialog() {
+    this.OPDialog.open(DialogOpenGroupsComponent ,{
+			disableClose: true,
+			panelClass: 'custom-modalbox',
+		});
   }
-		
+
 	sthtp: STHTP[] =[  
 		{SN : 'Hasan', D : '2022', FAOM : '1500000', MP : '150000', A : '50000'},  
 		{SN : 'Ahmad', D : '2023', FAOM : '1800000', MP : '250000', A : '70000'},  
@@ -137,4 +143,3 @@ class STHTP {
 	MP = '';  
 	A = '';  
 }  
-	

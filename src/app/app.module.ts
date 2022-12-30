@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DialogOpenGroupsComponent } from './View/dialogs/dialog-open-groups/dialog-open-groups.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DialogOpenGroupsComponent,
   ],
+	entryComponents: [DialogOpenGroupsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 		MatButtonModule,
 		MatIconModule,
   	FontAwesomeModule,
+		MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,113 @@
+*{
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	overflow-y: scroll;
+	background: grey;
+	box-shadow: inset 0 0 4px #707070;
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--mc);
+	border-radius: 3px;
+}
+
+.dialog{
+	background-color: var(--dbg);
+	width: 600px;
+	height: 500px;
+}
+
+.closebtn{
+	position: absolute;
+	margin-top: -12px;
+	margin-left: -10px;
+	color: var(--rc);
+	font-size: 20px;
+	cursor: pointer;
+	transition-property: transform;
+	transition-duration: 1s;
+}
+
+.closebtn:hover{
+	font-size: 24px;
+	animation: rotate 2s infinite linear; 
+}
+
+@keyframes rotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+.dialogContent{
+	position: relative;
+	height: 85%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.dialogContentColumn{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+
+.dialogContentHeader{
+	color: var(--mc);
+	font-size: 28px;
+}
+
+.dialogContentComboBox{
+	height: 320px;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	overflow-y: scroll;
+}
+
+.DonebtnContainer{
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Donebtn{
+	color: var(--fg);
+	width: 200px;
+}
+
+.dialogContenttxtContainer{
+	height: 50px;
+	width: 200px;
+	background-color: var(--lbg);
+	border-radius: 5px;
+	margin: 5px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.dialogContenttxtContainer:first-child{
+	margin-top: 10px;
+}
+
+.dialogContenttxtContainer:last-child{
+	margin-bottom: 10px;
+}
+
+.dialogContenttxt{
+	color: var(--fg);
+	text-align: center;
+}
+
+.dialogContenttxtContainer:hover{
+	background-color: var(--dbg);
+}
