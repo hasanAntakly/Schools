@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent{
   title = 'schools';
 	showFiller = false;
 	menuIcon = 'menu';
+
+	faCL = faChartLine;
 
 	public Change_Icon(){
 		if(this.menuIcon == 'menu')

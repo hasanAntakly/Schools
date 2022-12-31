@@ -1,0 +1,23 @@
+<div class="dialog">
+	<fa-icon class="closebtn" [icon]="faT" mat-dialog-close></fa-icon>
+	<div class="border" *ngIf="exams.length == 0">
+		<fa-icon class="blueIcon" [icon]="faF"></fa-icon>
+		<p class="blueIcon" style="font-size: 30px; height: auto; margin-top: -40px;">There are no exams today</p>
+	</div>
+	<div class="gridContainer">
+		<div class="gridHeader">
+			<p class="gridHeadertxt">Group</p>
+			<p class="gridHeadertxt">Study Year</p>
+			<p class="gridHeadertxt">Subject</p>
+			<p class="gridHeadertxt">Time</p>
+		</div>
+		<div class="gird">
+			<div class="gridItem" *ngFor="let item of exams;">
+				<p class="gridItemtxt">{{item.Group}}</p>
+				<p class="gridItemtxt">{{item.StudyYear}}</p>
+				<p class="gridItemtxt">{{item.Subject}}</p>
+				<p class="gridItemtxt">{{item.Time}}</p>
+			</div>
+		</div>
+	</div>
+</div>

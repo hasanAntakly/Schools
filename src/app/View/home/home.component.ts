@@ -7,6 +7,8 @@ import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { faTools } from '@fortawesome/free-solid-svg-icons';
 import { DialogOpenGroupsComponent } from '../dialogs/dialog-open-groups/dialog-open-groups.component';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogNotReadyComponent } from '../dialogs/dialog-not-ready/dialog-not-ready.component';
+import { DialogExamsTodayComponent } from '../dialogs/dialog-exams-today/dialog-exams-today.component';
 
 @Component({
   selector: 'app-home',
@@ -117,10 +119,24 @@ export class HomeComponent{
 		this.SClicked = !this.SClicked;
 	}
 
-  constructor(public OPDialog: MatDialog) {}
+  constructor(public matDialog: MatDialog) {}
 
-  openDialog() {
-    this.OPDialog.open(DialogOpenGroupsComponent ,{
+  openGroupDialog() {
+    this.matDialog.open(DialogOpenGroupsComponent ,{
+			disableClose: true,
+			panelClass: 'custom-modalbox',
+		});
+  }
+
+	openNotReadyDialog() {
+    this.matDialog.open(DialogNotReadyComponent ,{
+			disableClose: true,
+			panelClass: 'custom-modalbox',
+		});
+  }
+
+	openExamsTodayDialog() {
+    this.matDialog.open(DialogExamsTodayComponent ,{
 			disableClose: true,
 			panelClass: 'custom-modalbox',
 		});

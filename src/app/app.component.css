@@ -30,3 +30,37 @@
 .Iconbtn{
 	color: var(--mc);
 }
+
+.sidenav{
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.navbtn{
+	padding: 5px;
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-right: solid 3px var(--mc);
+	transition: 0.3s;
+}
+
+.navbtn:hover{
+	background-color: var(--dbg);
+	padding: 15px;
+}
+
+.navbtnIcon{
+	font-size: 24px;
+	color: var(--mc);
+}
+
+.navbtntxt{
+	margin-left: 40px;
+	width: 150px;
+	font-size: 24px;
+	color: var(--fg);
+}

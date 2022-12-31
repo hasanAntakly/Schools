@@ -1,15 +1,15 @@
 <!-- The cards -->
 <div class="cards">
 	<div class="row">
-		<div class="item" (click)="openDialog()">
+		<div class="item" (click)="openGroupDialog()">
 			<fa-icon class="homeItemIcon" [icon]="faUs"></fa-icon>
 			<p class="homeItemtxt">Available groups</p>
 		</div>
-		<div class="item">
+		<div class="item" (click)="openNotReadyDialog()">
 			<fa-icon class="homeItemIcon" [icon]="faUG"></fa-icon>
 			<p class="homeItemtxt">Best student for the month</p>
 		</div>
-		<div class="item">
+		<div class="item" (click)="openExamsTodayDialog()">
 			<fa-icon class="homeItemIcon" [icon]="faB"></fa-icon>
 			<p class="homeItemtxt">Tests today</p>
 		</div>
