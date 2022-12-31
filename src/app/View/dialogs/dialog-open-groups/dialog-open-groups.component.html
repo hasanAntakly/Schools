@@ -1,25 +1,59 @@
 <div class="dialog">
 	<fa-icon class="closebtn" [icon]="faT" mat-dialog-close></fa-icon>
-	<div class="dialogContent">
-		<div class="dialogContentColumn">
-			<p class="dialogContentHeader">Study Year</p>
-			<div class="dialogContentComboBox">
-				<div class="dialogContenttxtContainer" *ngFor="let item of SYItems;" (click)="yearClicked(item.Year)">
-					<p class="dialogContenttxt">{{item.Year}}</p>
+	<div class="PickedSE" [@HideTrigger]="PickedSE == false ? 'Hide' : 'DontHide'">
+		<div class="dialogContent">
+			<div class="dialogContentColumn">
+				<div class="selectedStudyYearEduLvl" [@HideTrigger]="ClickedYear != '' ? 'Hide' : 'DontHide'">
+					<fa-icon class="backbtn" [icon]="faAL"  (click)="BackyearClicked()"></fa-icon>
+					<p class="dialogContentHeader" style="margin: 0;">Study Year :</p>
+					<p class="dialogContentHeader" style="margin: 0; margin-bottom: 150px;">{{ ClickedYear }}</p>
+				</div>
+				<div class="dialogContentColumn" [@HideTrigger]="ClickedYear == '' ? 'Hide' : 'DontHide'">
+					<p class="dialogContentHeader">Study Year</p>
+					<div class="dialogContentComboBox">
+						<div class="dialogContenttxtContainer" *ngFor="let item of SYItems;" (click)="yearClicked(item.Year)">
+							<p class="dialogContenttxt">{{item.Year}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dialogContentColumn">
+				<div class="selectedStudyYearEduLvl" [@HideTrigger]="ClickedEduLvl != '' ? 'Hide' : 'DontHide'">
+					<fa-icon class="backbtn" [icon]="faAL" (click)="BackEduLvlClicked()"></fa-icon>
+					<p class="dialogContentHeader" style="margin: 0; font-size: 25px;">Educational level :</p>
+					<p class="dialogContentHeader" style="margin: 0; margin-bottom: 150px; text-align: center;">{{ ClickedEduLvl }}</p>
+				</div>
+				<div class="dialogContentColumn" [@HideTrigger]="ClickedEduLvl == '' ? 'Hide' : 'DontHide'">
+					<p class="dialogContentHeader">Educational Level</p>
+					<div class="dialogContentComboBox">
+						<div class="dialogContenttxtContainer" *ngFor="let item of ELItems;" (click)="eduClicked(item.EL)">
+							<p class="dialogContenttxt">{{item.EL}}</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		<div class="dialogContentColumn">
-			<p class="dialogContentHeader">Educational Level</p>
-			<div class="dialogContentComboBox">
-				<div class="dialogContenttxtContainer" *ngFor="let item of ELItems;" (click)="eduClicked(item.EL)">
-					<p class="dialogContenttxt">{{item.EL}}</p>
-				</div>
-			</div>
+		<div class="DonebtnContainer" *ngIf="ClickedEduLvl != '' && ClickedYear != ''">
+			<button mat-raised-button class="Donebtn" (click)="DoneClicked()">Done</button>
 		</div>
 	</div>
-	<div class="DonebtnContainer">
-		<button mat-stroked-button class="Donebtn">Done</button>
+	<div [@HideTrigger]="PickedSE == true ? 'Hide' : 'DontHide'">
+		<div class="Headers">
+			<p class="Headertxt">Group</p>
+			<p class="Headertxt">Seats Left</p>
+		</div>
+		<div class="PSEGrid">
+			<div class="noData" *ngIf="ListShow.length == 0">
+				<fa-icon class="noDataIcon" [icon]="faF"></fa-icon>
+				<p class="noDatatxt">No groups to show</p>
+			</div>
+			<div class="PSEGridItem" *ngFor="let item of ListShow;">
+				<p class="dialogContenttxt">{{item.Name}}</p>
+				<p class="dialogContenttxt">{{item.Number}}</p>
+			</div>
+		</div>
+		<div class="changebtnContainer">
+			<p class="changebtn" (click)="ChangeClicked()">Change the study year or the educational level</p>
+		</div>
 	</div>
 </div>
