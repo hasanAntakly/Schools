@@ -17,8 +17,8 @@
 .sidenav {
 	background-color: var(--lbg);
 	color: var(--fg);
-	width: 15%;
-  padding: 20px;
+	width: 12%;
+  padding: 20px 8px;
 }
 
 .sidenavContent {
@@ -36,21 +36,27 @@
 	justify-content: space-around;
 	align-items: flex-start;
 	flex-direction: column;
+	height: 100%;
 }
 
 .navbtn{
 	padding: 5px;
+	margin: 15px 0;
 	width: 200px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-right: solid 3px var(--mc);
-	transition: 0.3s;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
 }
+
 
 .navbtn:hover{
 	background-color: var(--dbg);
 	padding: 15px;
+	margin: 5px 0;
+  transform: rotate(-3deg);
 }
 
 .navbtnIcon{
@@ -61,6 +67,11 @@
 .navbtntxt{
 	margin-left: 40px;
 	width: 150px;
-	font-size: 24px;
+	font-size: 17px;
 	color: var(--fg);
+	transition:all linear 0.5s;
+}
+
+.glow{
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }

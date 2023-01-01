@@ -13,6 +13,14 @@ import { DialogOpenGroupsComponent } from './View/dialogs/dialog-open-groups/dia
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogNotReadyComponent } from './View/dialogs/dialog-not-ready/dialog-not-ready.component';
 import { DialogExamsTodayComponent } from './View/dialogs/dialog-exams-today/dialog-exams-today.component';
+import { TeacherComponent } from './View/teacher/teacher.component';
+import { SubjectComponent } from './View/subject/subject.component';
+import { StudentComponent } from './View/student/student.component';
+import { ReportComponent } from './View/report/report.component';
+import { NotificationComponent } from './View/notification/notification.component';
+import { WeekProgramComponent } from './View/week-program/week-program.component';
+import { ExamComponent } from './View/exam/exam.component';
+import { GroupComponent } from './View/group/group.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +29,14 @@ import { DialogExamsTodayComponent } from './View/dialogs/dialog-exams-today/dia
     DialogOpenGroupsComponent,
     DialogNotReadyComponent,
     DialogExamsTodayComponent,
+    TeacherComponent,
+    SubjectComponent,
+    StudentComponent,
+    ReportComponent,
+    NotificationComponent,
+    WeekProgramComponent,
+    ExamComponent,
+    GroupComponent,
   ],
 	entryComponents: [
 		DialogOpenGroupsComponent,

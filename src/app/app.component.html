@@ -1,53 +1,52 @@
 <mat-drawer-container class="container" autosize>
 	<mat-drawer #drawer class="sidenav" mode="side">
 		<div class="sidenav">
-			<div class="navbtn">
+			<div routerLink="/" routerLinkActive="active" class="navbtn" (click)="indicator = 0">
 				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+				<p class="navbtntxt" [ngClass]="indicator == 0 ? 'glow' : 'notGlow'">Statistics</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/teacher" routerLinkActive="active" class="navbtn" (click)="indicator = 1">
+				<fa-icon class="navbtnIcon" [icon]="faCT"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 1 ? 'glow' : 'notGlow'">Teachers</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/subject" routerLinkActive="active" class="navbtn" (click)="indicator = 2">
+				<fa-icon class="navbtnIcon" [icon]="faB"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 2 ? 'glow' : 'notGlow'">Subjects</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/student" routerLinkActive="active" class="navbtn" (click)="indicator = 3">
+				<fa-icon class="navbtnIcon" [icon]="faUG"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 3 ? 'glow' : 'notGlow'">Students</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/report" routerLinkActive="active" class="navbtn" (click)="indicator = 4">
+				<fa-icon class="navbtnIcon" [icon]="faClList"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 4 ? 'glow' : 'notGlow'">Reports</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/notification" routerLinkActive="active" class="navbtn" (click)="indicator = 5">
+				<fa-icon class="navbtnIcon" [icon]="faBe"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 5 ? 'glow' : 'notGlow'">Notifications</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/weekProgram" routerLinkActive="active" class="navbtn" (click)="indicator = 6">
+				<fa-icon class="navbtnIcon" [icon]="faCA"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 6 ? 'glow' : 'notGlow'">Week lessons</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/exam" routerLinkActive="active" class="navbtn" (click)="indicator = 7">
+				<fa-icon class="navbtnIcon" [icon]="faBO"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 7 ? 'glow' : 'notGlow'">Exams</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div routerLink="/group" routerLinkActive="active" class="navbtn" (click)="indicator = 8">
+				<fa-icon class="navbtnIcon" [icon]="faU"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 8 ? 'glow' : 'notGlow'">groups</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div class="navbtn" (click)="indicator = 9">
+				<fa-icon class="navbtnIcon" [icon]="faUS"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 9 ? 'glow' : 'notGlow'">Accounts</p>
 			</div>
-			<div class="navbtn">
-				<fa-icon class="navbtnIcon" [icon]="faCL"></fa-icon>
-				<p class="navbtntxt">Statistics</p>
+			<div class="navbtn" (click)="indicator = 10">
+				<fa-icon class="navbtnIcon" [icon]="faC"></fa-icon>
+				<p class="navbtntxt" [ngClass]="indicator == 10 ? 'glow' : 'notGlow'">Settings</p>
 			</div>
 		</div>
 	</mat-drawer>
-
 	<div class="sidenavContent">
 		<button mat-icon-button class="Iconbtn" (click)="drawer.toggle()" (click)="Change_Icon()">
 			<mat-icon>{{ menuIcon }}</mat-icon>
