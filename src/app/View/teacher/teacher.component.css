@@ -1,0 +1,196 @@
+*{
+	box-sizing: border-box;
+}
+
+.header{
+	height: 70px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.borderbtn{
+	height: 50px;
+	border: solid 2px var(--mc);
+	border-radius: 5px; 
+	margin: 10px;
+	margin-left: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 10px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.btntxt{
+	margin-left: 10px;
+	color: var(--mc);
+	font-size: 20px;
+	text-align: center;
+}
+
+.btnIcon{
+	color: var(--mc);
+}
+
+.borderbtn:hover{
+	background-color: var(--lbg);
+	border: solid 4px var(--mc);
+}
+
+.search{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.searchIcon{
+	margin: 20px;
+	color: var(--mc);
+	transition: 0.3s;
+	font-size: 18px; 
+	cursor: pointer;
+}
+
+.searchIcon:hover{
+	font-size: 24px;
+}
+
+.txtInput{
+	margin-left: 0;
+	margin-right: 20px;
+	color: var(--fg);
+}
+
+.rotate{
+	transform: rotate(1turn);
+}
+
+.reRotate{
+	transform: rotate(-1turn);
+}
+
+.content{
+	width: 100%;
+	height: 88%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.halfContent{
+	margin: 30px;
+	width: 50%;
+	height: 100%;
+	background-color: var(--lbg);
+}
+
+.teacherbtnContainer{
+	height: 70px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--dbg);
+}
+
+.borderTeacherbtn{
+	width: 50%;
+	height: 50px;
+	border: solid 2px var(--mc);
+	border-radius: 5px; 
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 10px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.borderTeacherbtn:hover{
+	background-color: var(--lbg);
+}
+
+.btnTeachertxt{
+	margin-left: -40px;
+	color: var(--mc);
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	transition: 0.3s;
+}
+
+.btnTeacerIcon{
+	width: 40px;
+	color: var(--mc);
+	transition: 0.3s;
+}
+
+.hide{
+	opacity: 0;
+}
+
+.border{
+	border: solid 1px var(--mc);
+}
+
+.glow{
+	text-shadow: 0 0 10px var(--mc), 0 0 20px var(--mc);
+}
+
+.grid{
+	width: 100%;
+	height: 92%;
+	background-color: var(--dbg);
+	border: solid 3px var(--mc);
+	border-radius: 5px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.girdHeader{
+	position: sticky;
+	width: 100%;
+	height: 40px;
+	padding: 0 10px;
+	background-color: var(--mc);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.gridHeadertxt{
+	width: 15%;
+	font-size: 18px;
+	color: var(--fg);
+	text-align: center;
+}
+
+.gridItem{
+	height: 40px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--lbg);
+	margin: 10px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.gridItem:hover{
+	background-color: var(--dbg);
+}
+
+.gridItemtxt{
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+}
+
+.gridItemIcon{
+	width: 5%;
+	text-align: center;
+}

@@ -2,10 +2,6 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	--dbg: #1E1E1E;
-  --lbg: #2D2D30;
-	--fg: #fff;
-	--mc: #007ACC;
 }
 
 .container {

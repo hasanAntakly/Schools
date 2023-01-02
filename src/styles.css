@@ -14,3 +14,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: var(--dbg);
 	border-radius: 20px;
 }
+
+::-webkit-scrollbar {
+	width: 4px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--mc);
+	border-radius: 3px;
+}
+

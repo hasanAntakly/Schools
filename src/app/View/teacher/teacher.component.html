@@ -1,1 +1,53 @@
-<p>teacher works!</p>
+<div class="header">
+	<div class="borderbtn">
+		<fa-icon class="btnIcon" [icon]="faP"></fa-icon>
+		<p class="btntxt">New Teacher</p>
+	</div>
+	<div class="search">
+		<fa-icon [ngClass]="ClickedSearch == true ? 'rotate' : 'reRotate'" class="searchIcon" [icon]="faS" (click)="ChangeIcon()" (click)="ClickedSearch = !ClickedSearch;"></fa-icon>
+		<mat-form-field class="txtInput" [@HideTrigger]="ClickedSearch == true? 'Hide' : 'DontHide'">
+			<mat-label class="txtInput">Teacher</mat-label>
+			<input matInput>
+		</mat-form-field>
+	</div>
+</div>
+
+<div class="content">
+	<div class="halfContent">
+
+	</div>
+	<div class="halfContent">
+		<div class="teacherbtnContainer">
+			<div class="borderTeacherbtn" (click)="Selected = 'P'" style="margin-right: 5px;">
+				<fa-icon [ngClass]="Selected == 'P' ? 'show' : 'hide'" class="btnTeacerIcon" [icon]="faC"></fa-icon>
+				<p class="btnTeachertxt" [ngClass]="Selected == 'P' ? 'glow' : 'notGlow'">Payments</p>
+			</div>
+			<div class="borderTeacherbtn" (click)="Selected = 'C'" style="margin-left: 5px;">
+				<fa-icon [ngClass]="Selected == 'C' ? 'show' : 'hide'" class="btnTeacerIcon" [icon]="faC"></fa-icon>
+				<p class="btnTeachertxt" [ngClass]="Selected == 'C' ? 'glow' : 'notGlow'">Courses</p>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="girdHeader">
+				<p class="gridHeadertxt">ID</p>
+				<p class="gridHeadertxt">First Name</p>
+				<p class="gridHeadertxt">Last Name</p>
+				<p class="gridHeadertxt">Gender</p>
+				<p class="gridHeadertxt">DOB</p>
+				<p class="gridHeadertxt">Number</p>
+				<fa-icon class="gridItemIcon" [icon]="faT"></fa-icon>
+				<fa-icon class="gridItemIcon" [icon]="faE"></fa-icon>
+			</div>
+			<div [ngClass]="ClickedID == item.ID ? 'border' : ''" class="gridItem" *ngFor="let item of teachers;" (click)="ClickedID = item.ID">
+				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.ID}}</p>
+				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.FirstName}}</p>
+				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.LastName}}</p>
+				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.Gender}}</p>
+				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.DOB}}</p>
+				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.Number}}</p>
+				<fa-icon class="gridItemIcon" [icon]="faT" style="color: var(--rc);"></fa-icon>
+				<fa-icon class="gridItemIcon" [icon]="faE" style="color: var(--mc);"></fa-icon>
+			</div>
+		</div>
+	</div>
+</div>

@@ -21,6 +21,7 @@ import { NotificationComponent } from './View/notification/notification.componen
 import { WeekProgramComponent } from './View/week-program/week-program.component';
 import { ExamComponent } from './View/exam/exam.component';
 import { GroupComponent } from './View/group/group.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { GroupComponent } from './View/group/group.component';
 		MatButtonModule,
 		MatIconModule,
   	FontAwesomeModule,
-		MatDialogModule
+		MatDialogModule,
+		MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
