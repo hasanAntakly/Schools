@@ -1,7 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { faChartLine } from '@fortawesome/free-solid-svg-icons';
-import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine, faChalkboardTeacher, faBook } from '@fortawesome/free-solid-svg-icons';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +8,8 @@ import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-root',
@@ -35,10 +35,11 @@ export class AppComponent {
 	faU = faUsers;
 	faUS = faUserShield;
 	faC = faCog;
+	faM = faBars;
 
 	public Change_Icon() {
-		if (this.menuIcon == 'menu')
-			this.menuIcon = 'arrow_back';
-		else this.menuIcon = 'menu';
+		if (this.faM == faBars)
+			this.faM = faArrowLeft;
+		else this.faM = faBars;
 	}
 }

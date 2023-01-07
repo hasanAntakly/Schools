@@ -71,3 +71,7 @@
 .glow{
 	text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
+
+.icon{
+	font-size: 18px;
+}

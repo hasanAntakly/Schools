@@ -1,11 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { Component, getNgModuleById, OnInit } from '@angular/core';
+import { faPlus, faSearch, faTimes, faCheck, faTrash, faEdit, faFrown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-teacher',
@@ -36,11 +31,12 @@ export class TeacherComponent implements OnInit {
 	faC = faCheck;
 	faT = faTrash;
 	faE = faEdit;
+	faF = faFrown;
 
 	ClickedSearch = false;
 	ClickedID = '';
 
-	Selected = 'P';
+	Selected = '';
 
   constructor() { }
 
@@ -55,6 +51,7 @@ export class TeacherComponent implements OnInit {
 			this.faS = faTimes;
 		}
 	}
+
 
 	teachers: Teachers[] = [
 		{ID: '0', FirstName: 'hasan', LastName: 'teaher', Gender: 'Male', DOB: '01', Number: '0957'},
@@ -85,7 +82,7 @@ export class TeacherComponent implements OnInit {
 		{ID: '5', FirstName: 'hekmat', LastName: 'teaher', Gender: 'Male', DOB: '00', Number: '0587'},
 		{ID: '6', FirstName: 'joelle', LastName: 'teaher', Gender: 'Female', DOB: '99', Number: '0587'},
 		{ID: '7', FirstName: 'lana', LastName: 'teaher', Gender: 'Female', DOB: '01', Number: '65156'},
-	]
+	];
 
 }
 

@@ -5,7 +5,7 @@
 	</div>
 	<div class="search">
 		<fa-icon [ngClass]="ClickedSearch == true ? 'rotate' : 'reRotate'" class="searchIcon" [icon]="faS" (click)="ChangeIcon()" (click)="ClickedSearch = !ClickedSearch;"></fa-icon>
-		<mat-form-field class="txtInput" [@HideTrigger]="ClickedSearch == true? 'Hide' : 'DontHide'">
+		<mat-form-field class="txtInput" [@HideTrigger]="ClickedSearch == true ? 'Hide' : 'DontHide'">
 			<mat-label class="txtInput">Teacher</mat-label>
 			<input matInput>
 		</mat-form-field>
@@ -13,8 +13,11 @@
 </div>
 
 <div class="content">
-	<div class="halfContent">
-
+	<div class="FirsthalfContent">
+		<div class="noContent border3" [@HideTrigger]="Selected == '' ? 'Hide' : 'DontHide'">
+			<fa-icon [icon]="faF" class="noContenticon"></fa-icon>
+			<p class="noContenttxt">Please select either payments or courses</p>
+		</div>
 	</div>
 	<div class="halfContent">
 		<div class="teacherbtnContainer">
