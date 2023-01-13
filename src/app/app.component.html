@@ -48,8 +48,8 @@
 		</div>
 	</mat-drawer>
 	<div class="sidenavContent">
-		<button mat-icon-button class="Iconbtn" (click)="drawer.toggle()" (click)="Change_Icon()">
-			<fa-icon class="icon" [icon]="faM"></fa-icon>
+		<button [ngClass]="ClickedMenu == true ? 'rotate' : 'reRotate'" mat-icon-button class="Iconbtn" (click)="drawer.toggle()" (click)="Change_Icon()" (click)="ClickedMenu = !ClickedMenu;">
+		<fa-icon class="icon" [icon]="faM"></fa-icon>
 		</button>
 		<router-outlet></router-outlet>
 	</div>

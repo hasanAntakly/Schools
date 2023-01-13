@@ -24,6 +24,7 @@
 }
 
 .Iconbtn{
+	transition: 0.3s;
 	color: var(--mc);
 }
 
@@ -75,3 +76,12 @@
 .icon{
 	font-size: 18px;
 }
+
+.rotate{
+	transform: rotate(1turn);
+}
+
+.reRotate{
+	transform: rotate(-1turn);
+}
+

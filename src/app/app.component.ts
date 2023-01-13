@@ -23,6 +23,7 @@ export class AppComponent {
 	menuIcon = 'menu';
 
 	indicator = 0;
+	ClickedMenu = false;
 
 	faCL = faChartLine;
 	faCT = faChalkboardTeacher;
