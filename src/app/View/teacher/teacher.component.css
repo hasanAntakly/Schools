@@ -42,7 +42,7 @@
 
 .search{
 	display: flex;
-	justify-content: center;
+	justify-content: end;
 	align-items: center;
 	margin-right: 10px;
 }
@@ -93,6 +93,9 @@
 	width: 50%;
 	height: 100%;
 	border-radius: 5px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .teacherbtnContainer{
@@ -227,4 +230,31 @@
 .noContenticon{
 	color: var(--mc);
 	font-size: 100px;
+}
+
+.TeacherCourse{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.borderTeacherCoursebtn{
+	width: 100%;
+	height: 50px;
+	border: solid 2px var(--mc);
+	border-radius: 5px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+	transition: 0.3s;
+	cursor: pointer;
+	margin: 10px 0;
+}
+
+.borderTeacherCoursebtn:hover{
+	background-color: var(--lbg);
 }

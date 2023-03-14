@@ -22,6 +22,7 @@ import { WeekProgramComponent } from './View/week-program/week-program.component
 import { ExamComponent } from './View/exam/exam.component';
 import { GroupComponent } from './View/group/group.component';
 import { MatInputModule } from '@angular/material/input';
+import { DialogTeacherCouresComponent } from './View/dialogs/dialog-teacher-coures/dialog-teacher-coures.component';
 
 @NgModule({
   declarations: [
@@ -38,11 +39,13 @@ import { MatInputModule } from '@angular/material/input';
     WeekProgramComponent,
     ExamComponent,
     GroupComponent,
+    DialogTeacherCouresComponent,
   ],
 	entryComponents: [
 		DialogOpenGroupsComponent,
 		DialogNotReadyComponent,
 		DialogExamsTodayComponent,
+		DialogTeacherCouresComponent
 	],
   imports: [
     BrowserModule,

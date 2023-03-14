@@ -1,6 +1,8 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, getNgModuleById, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { faPlus, faSearch, faTimes, faCheck, faTrash, faEdit, faFrown } from '@fortawesome/free-solid-svg-icons';
+import { DialogTeacherCouresComponent } from '../dialogs/dialog-teacher-coures/dialog-teacher-coures.component';
 
 @Component({
   selector: 'app-teacher',
@@ -10,10 +12,27 @@ import { faPlus, faSearch, faTimes, faCheck, faTrash, faEdit, faFrown } from '@f
 		trigger('HideTrigger', [
 			// ...
 			state('Hide', style({
+				width: '0%',
+				opacity: '0',
 			})),
 			state('DontHide', style({
-				width: '0px',
-				opacity: '0'
+				width: '100%',
+				opacity: '1'
+			})),
+			transition('Hide => DontHide', [
+				animate('0.5s')
+			]),
+			transition('DontHide => Hide', [
+				animate('0.5s')
+			]),
+		]),
+		trigger('HideSearchTrigger', [
+			// ...
+			state('Hide', style({
+				width: '0%',
+				opacity: '0',
+			})),
+			state('DontHide', style({
 			})),
 			transition('Hide => DontHide', [
 				animate('0.5s')
@@ -36,9 +55,9 @@ export class TeacherComponent implements OnInit {
 	ClickedSearch = false;
 	ClickedID = '';
 
-	Selected = '';
+	Selected = 'P';
 
-  constructor() { }
+  constructor(public matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -52,6 +71,12 @@ export class TeacherComponent implements OnInit {
 		}
 	}
 
+	openCouresDialog() {
+    this.matDialog.open(DialogTeacherCouresComponent ,{
+			disableClose: true,
+			panelClass: 'custom-modalbox',
+		});
+  }
 
 	teachers: Teachers[] = [
 		{ID: '0', FirstName: 'hasan', LastName: 'teaher', Gender: 'Male', DOB: '01', Number: '0957'},
