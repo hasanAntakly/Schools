@@ -21,8 +21,10 @@ import { NotificationComponent } from './View/notification/notification.componen
 import { WeekProgramComponent } from './View/week-program/week-program.component';
 import { ExamComponent } from './View/exam/exam.component';
 import { GroupComponent } from './View/group/group.component';
+import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { DialogTeacherCouresComponent } from './View/dialogs/dialog-teacher-coures/dialog-teacher-coures.component';
+import { DialogDeleteComponent } from './View/dialogs/dialog-delete/dialog-delete.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +42,14 @@ import { DialogTeacherCouresComponent } from './View/dialogs/dialog-teacher-cour
     ExamComponent,
     GroupComponent,
     DialogTeacherCouresComponent,
+    DialogDeleteComponent,
   ],
 	entryComponents: [
 		DialogOpenGroupsComponent,
 		DialogNotReadyComponent,
 		DialogExamsTodayComponent,
-		DialogTeacherCouresComponent
+		DialogTeacherCouresComponent,
+		DialogDeleteComponent
 	],
   imports: [
     BrowserModule,
@@ -53,6 +57,7 @@ import { DialogTeacherCouresComponent } from './View/dialogs/dialog-teacher-cour
     BrowserAnimationsModule,
 		MatSidenavModule,
 		MatButtonModule,
+		MatSelectModule,
 		MatIconModule,
   	FontAwesomeModule,
 		MatDialogModule,

@@ -1,0 +1,55 @@
+*{
+	box-sizing: border-box;
+}
+
+.dialog{
+	width: 400px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+.btnsContainer{
+	display: flex;
+	justify-content: flex-start;
+ 	align-items: center;
+}
+
+.roundedbtn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--dbg);
+	color: var(--fg);
+	width: 50px;
+	height: 50px;
+	font-size: 18px;
+	border-radius: 50%;
+	margin: 0 5px;
+	transition: 0.3s;
+	cursor: pointer;
+	box-shadow: -8px 10px 32px 0px rgba(0,0,0,0.75);
+}
+
+.roundedbtn:hover{
+	scale: 1.1;
+}
+
+.roundedbtnOneHolder{
+	position: absolute;
+	left: calc(50% - 63px);
+	margin-bottom: -30px;
+}
+
+.roundedbtnTwoHolder{
+	position: absolute;
+	left: calc(50%);
+	margin-bottom: -30px;
+}
+
+.roundedbtnIcon{
+	font-size: 22px;
+}

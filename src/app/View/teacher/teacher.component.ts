@@ -2,6 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, getNgModuleById, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { faPlus, faSearch, faTimes, faCheck, faTrash, faEdit, faFrown } from '@fortawesome/free-solid-svg-icons';
+import { DialogDeleteComponent } from '../dialogs/dialog-delete/dialog-delete.component';
 import { DialogTeacherCouresComponent } from '../dialogs/dialog-teacher-coures/dialog-teacher-coures.component';
 
 @Component({
@@ -77,6 +78,13 @@ export class TeacherComponent implements OnInit {
 			panelClass: 'custom-modalbox',
 		});
   }
+
+	OpenDeleteDialog() {
+		this.matDialog.open(DialogDeleteComponent ,{
+			disableClose: true,
+			panelClass: 'custom-modalbox',
+		});
+	}
 
 	teachers: Teachers[] = [
 		{ID: '0', FirstName: 'hasan', LastName: 'teaher', Gender: 'Male', DOB: '01', Number: '0957'},

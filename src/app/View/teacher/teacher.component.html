@@ -19,7 +19,7 @@
 			<p class="noContenttxt">Please select either payments or courses</p>
 		</div>
 		<div class="TeacherCourse">
-			<div class="borderTeacherCoursebtn"  (click)="openCouresDialog()" (click)="Selected = 'P'" style="margin-right: 5px;">
+			<div class="borderTeacherCoursebtn" (click)="openCouresDialog()" (click)="Selected = 'P'" style="margin-right: 5px;">
 				<p class="btnTeachertxt">Assign a coures to the teacher</p>
 			</div>
 			<div class="grid">
@@ -40,8 +40,8 @@
 					<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.Gender}}</p>
 					<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.DOB}}</p>
 					<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.Number}}</p>
-					<fa-icon class="gridItemIcon" [icon]="faT" style="color: var(--rc);"></fa-icon>
-					<fa-icon class="gridItemIcon" [icon]="faE" style="color: var(--mc);"></fa-icon>
+					<fa-icon class="gridItemIcon" (click)="OpenDeleteDialog()" [icon]="faT" style="color: var(--rc);"></fa-icon>
+					<fa-icon class="gridItemIcon" (click)="openCouresDialog()" [icon]="faE" style="color: var(--mc);"></fa-icon>
 				</div>
 			</div>
 		</div>
@@ -75,8 +75,8 @@
 				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.Gender}}</p>
 				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.DOB}}</p>
 				<p [ngClass]="ClickedID == item.ID ? 'glow' : ''" class="gridItemtxt">{{item.Number}}</p>
-				<fa-icon class="gridItemIcon" [icon]="faT" style="color: var(--rc);"></fa-icon>
-				<fa-icon class="gridItemIcon" [icon]="faE" style="color: var(--mc);"></fa-icon>
+				<fa-icon class="gridItemIcon" (click)="OpenDeleteDialog()" [icon]="faT" style="color: var(--rc);"></fa-icon>
+				<fa-icon class="gridItemIcon" (click)="openCouresDialog()" [icon]="faE" style="color: var(--mc);"></fa-icon>
 			</div>
 		</div>
 	</div>

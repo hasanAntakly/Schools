@@ -4,7 +4,7 @@
 
 .dialog{
 	width: 480px;
-	height: 400px;
+	height: 360px;
 }
 
 .header{
@@ -47,8 +47,11 @@
 	height: auto;
 }
 
-.row{
+.row:first-child{
 	margin-top: 20px;
+}
+
+.row{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -78,7 +81,7 @@
 	transition: 0.3s;
 	cursor: pointer;
 	scale: 0.9;
-	box-shadow: -2px 2px 15px 5px rgb(0, 0, 0, 0.7);
+	box-shadow: -8px 10px 32px 0px rgba(0,0,0,0.75);
 }
 
 .roundedbtn:hover{
@@ -87,16 +90,20 @@
 
 .roundedbtnOneHolder{
 	position: absolute;
-	left: calc(50% - 220px);
-	margin-bottom: -100px;
+	left: calc(50% - 230px);
+	margin-bottom: -50px;
 }
 
 .roundedbtnTwoHolder{
 	position: absolute;
-	left: calc(50% - 160px);
-	margin-bottom: -100px;
+	left: calc(50% - 175px);
+	margin-bottom: -50px;
 }
 
 .roundedbtnIcon{
 	font-size: 22px;
+}
+
+.coursetxtinput{
+	width: 200px;
 }

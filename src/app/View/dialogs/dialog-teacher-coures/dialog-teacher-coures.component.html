@@ -9,43 +9,59 @@
 	</div>
 	<div class="content">
 		<div class="row">
-			<mat-form-field class="txtInput">
-				<mat-label class="txtInput">Teacher</mat-label>
-				<input matInput>
+			<mat-form-field appearance="fill">
+				<mat-label>Study year</mat-label>
+				<mat-select>
+					<mat-option *ngFor="let item of SYItems" [value]="item.Year">
+						{{item.Year}}
+					</mat-option>
+				</mat-select>
 			</mat-form-field>
-			<mat-form-field class="txtInput">
-				<mat-label class="txtInput">Teacher</mat-label>
-				<input matInput>
+			<mat-form-field appearance="fill">
+				<mat-label>Educational level</mat-label>
+				<mat-select>
+					<mat-option *ngFor="let item of ELItems" [value]="item.EL">
+						{{item.EL}}
+					</mat-option>
+				</mat-select>
 			</mat-form-field>
 		</div>
 		<div class="row">
-			<mat-form-field class="txtInput">
-			<mat-label class="txtInput">Teacher</mat-label>
-			<input matInput>
-		</mat-form-field>
-		<mat-form-field class="txtInput">
-			<mat-label class="txtInput">Teacher</mat-label>
-			<input matInput>
-		</mat-form-field>
+			<mat-form-field appearance="fill">
+				<mat-label>Group</mat-label>
+				<mat-select>
+					<mat-option *ngFor="let item of SYItems" [value]="item.Year">
+						{{item.Year}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<mat-form-field appearance="fill">
+				<mat-label>Subject</mat-label>
+				<mat-select>
+					<mat-option *ngFor="let item of ELItems" [value]="item.EL">
+						{{item.EL}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
 		</div>
 		<div class="row">
-			<mat-form-field class="txtInput">
-			<mat-label class="txtInput">Teacher</mat-label>
-			<input matInput>
-		</mat-form-field>
-		<mat-form-field class="txtInput">
-			<mat-label class="txtInput">Teacher</mat-label>
-			<input matInput>
-		</mat-form-field>
+			<mat-form-field class="coursetxtinput">
+				<mat-label>Extra information</mat-label>
+				<input matInput>
+			</mat-form-field>
+			<mat-form-field class="coursetxtinput">
+				<mat-label>Money amount</mat-label>
+				<input matInput>
+			</mat-form-field>
 		</div>
 		<div class="btnsContainer">
 			<div class="roundedbtnOneHolder">
-				<div class="roundedbtn" style="background-color: var(--mc);">
+				<div class="roundedbtn" style="background-color: var(--mc);" mat-dialog-close>
 					<fa-icon class="roundedbtnIcon" [icon]="faC"></fa-icon>
 				</div>
 			</div>
 			<div class="roundedbtnTwoHolder">
-				<div class="roundedbtn" style="background-color: var(--lbg);">
+				<div class="roundedbtn" style="background-color: var(--lbg);" mat-dialog-close>
 					<fa-icon class="roundedbtnIcon" [icon]="faT"></fa-icon>
 				</div>
 			</div>
