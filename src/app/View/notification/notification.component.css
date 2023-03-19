@@ -1,0 +1,153 @@
+*{
+	box-sizing: border-box;
+}
+
+.content{
+	width: 100%;
+	height: 95%;
+}
+
+
+.teacherbtn{
+	position: absolute;	
+	left: 36%;
+	border: solid 2px var(--mc);
+	width: 30%;
+	height: 18%;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+	cursor: pointer;
+	z-index: 4;
+}
+
+.studentbtn{
+	position: absolute;	
+	left: 68%;
+	border: solid 2px var(--mc);
+	width: 30%;
+	height: 18%;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+	cursor: pointer;
+	z-index: 4;
+}
+
+.inputs{
+	position: absolute;	
+	left: 2%;
+	width: 32%;
+	height: 95%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+
+.dataGrid{
+	position: absolute;
+	left: 36%;
+	top: 25%;
+	width: 62%;
+	height: 74%;
+	background-color: var(--lbg);
+}
+
+.dataGridHeadertxt{
+	font-size: 30px;
+	color: var(--mc);
+	font-weight: bold;
+}
+
+.notificationInput{
+	width: 100%;
+	margin: 5px;
+}
+
+.studentbtn:hover{
+	background-color: var(--lbg);
+}
+
+.teacherbtn:hover{
+	background-color: var(--lbg);
+}
+
+.specificStudentbtn:hover{
+	background-color: var(--lbg);
+}
+
+.mainbtntxt{
+	color: var(--mc);
+	font-size: 28px;
+}
+
+.mainbtnIcon{
+	color: var(--mc);
+	font-size: 80px;
+	position: relative;
+  margin-right: -25%;
+	margin-left: 15%;
+}
+
+.studentContainer{
+	position: absolute;	
+	left: 68%;
+	width: 30%;
+	height: 18%;
+	display: flex;
+	justify-content: center;
+	align-items: top;
+	flex-direction: column;
+}
+
+.studentbtnsContainer{
+	display: flex;
+	justify-content: space-around;
+	align-items: top;
+	width: 100%;
+	height: 40%;
+}
+
+.specificStudentbtn{
+	border: solid 2px var(--mc);
+	border-radius: 10px;
+	width: 30%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--mc);
+	font-size: 18px;
+	transition: 0.3s;
+}
+
+.specificStudentbtnIcon{
+	color: var(--mc);
+	font-size: 20px;
+	position: relative;
+	margin-right: -15px;
+	margin-left: 5px;
+}
+
+.studentInputsContainer{
+	margin: 5px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	height: 40%;
+	border-radius: 10px; 
+}
+
+.studentInput{
+	position: absolute;
+	width: 63%;
+	margin-right: 17px;
+	margin-top: 25px;
+	z-index: 5;
+}

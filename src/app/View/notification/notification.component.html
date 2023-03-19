@@ -1,1 +1,73 @@
-<p>notification works!</p>
+<div class="content">
+	<div [@HideTrigger]="Clickedbtn == 't' ? 'Hide' : 'DontHide'" class="teacherbtn" (click)="this.Clickedbtn = 't'; this.ClickedStudentbtn = '';">
+		<p class="mainbtntxt">Send to a teacher</p>
+		<fa-icon class="mainbtnIcon" [icon]="faCT"></fa-icon>
+	</div>
+	<div [@HideTrigger]="Clickedbtn == 's' ? 'Hide' : 'DontHide'" class="studentbtn" (click)="this.Clickedbtn = 's'">
+		<p class="mainbtntxt">Send to a student</p>
+		<fa-icon class="mainbtnIcon" [icon]="faUG"></fa-icon>
+	</div>
+	<div [@HideTrigger]="Clickedbtn != 's' ? 'Hide' : 'DontHide'" class="studentContainer">
+		<div class="studentbtnsContainer">
+			<div class="specificStudentbtn" (click)="this.ClickedStudentbtn = 'as'">
+				All students
+				<fa-icon [@HideTrigger]="ClickedStudentbtn != 'as' ? 'Hide' : 'DontHide'" class="specificStudentbtnIcon" [icon]="faC"></fa-icon>
+			</div>
+			<div class="specificStudentbtn" (click)="this.ClickedStudentbtn = 'sg'">
+				Specific group
+				<fa-icon [@HideTrigger]="ClickedStudentbtn != 'sg' ? 'Hide' : 'DontHide'" class="specificStudentbtnIcon" [icon]="faC"></fa-icon>
+			</div>
+			<div class="specificStudentbtn" (click)="this.ClickedStudentbtn = 'ss'">
+				Specific student
+				<fa-icon [@HideTrigger]="ClickedStudentbtn != 'ss' ? 'Hide' : 'DontHide'" class="specificStudentbtnIcon" [icon]="faC"></fa-icon>
+			</div>
+		</div>
+		<div class="studentInputsContainer">
+			<mat-form-field class="studentInput" appearance="fill" [@DoubleHideTrigger]="ClickedStudentbtn != 'ss' ? 'Hide' : 'DontHide'">
+				<mat-label>Student</mat-label>
+				<mat-select>
+					<mat-option>
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<mat-form-field class="studentInput" appearance="fill" [@DoubleHideTrigger]="ClickedStudentbtn != 'sg' ? 'Hide' : 'DontHide'">
+				<mat-label>Group</mat-label>
+				<mat-select>
+					<mat-option>
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+	</div>
+	<div class="inputs">
+		<mat-form-field class="notificationInput" appearance="fill">
+			<mat-label>Study year</mat-label>
+			<mat-select>
+				<mat-option>
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="notificationInput" appearance="fill">
+			<mat-label>Educational level</mat-label>
+			<mat-select>
+				<mat-option>
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="notificationInput">
+			<mat-label class="txtInput">The notification subject</mat-label>
+			<input matInput>
+		</mat-form-field>
+		<mat-form-field class="notificationInput">
+			<mat-label class="txtInput">The notification content</mat-label>
+			<input matInput>
+		</mat-form-field>
+	</div>
+	<div class="dataGrid">
+		<p class="dataGridHeadertxt">
+			The Sent Notifications
+		</p>
+		<div class="dataGridFilter">
+		</div>
+	</div>
+</div>
