@@ -83,15 +83,15 @@
 
 .mainbtntxt{
 	color: var(--mc);
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .mainbtnIcon{
 	color: var(--mc);
 	font-size: 80px;
 	position: relative;
-  margin-right: -25%;
-	margin-left: 15%;
+  margin-right: -15%;
+	margin-left: 10%;
 }
 
 .studentContainer{
